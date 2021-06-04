@@ -1,5 +1,10 @@
-<h1>新規投稿ページ</h1>
-<%= form_with url: "/posts", method: :post, local: true do |form| %>
-  <%= form.text_field :content %>
-  <%= form.submit '投稿する' %>
-<% end %>
+<main class="container">
+  <h2>新規投稿</h2>
+  <%= form_with url: "/posts", method: :post, local: true do |form| %>
+    <div class="form-floating" style="margin: 20px 0">
+      <%= form.text_field :content, class: "form-control",  placeholder: "ここに投稿内容を書く", id: "floatingTextarea2"%>
+      <label for="floatingTextarea2">Content</label>
+    </div>
+    <%= form.submit '投稿する', class: "btn btn-primary" %>
+  <% end %>
+</main>

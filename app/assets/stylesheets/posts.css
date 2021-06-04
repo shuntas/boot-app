@@ -7,3 +7,7 @@
 .post-date{
   color: gray;
 }
+
+body {
+  padding-top: 5rem;
+}

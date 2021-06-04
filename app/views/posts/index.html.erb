@@ -1,12 +1,14 @@
-<h1>トップページ</h1>
-<%= link_to '新規投稿', '/posts/new' %>
-<% @posts.each do |post| %>
-  <div class="post">
-    <div class="post-date">
-      投稿日時：<%= post.created_at %>
+<main class="container">
+  <% @posts.each do |post| %>
+    <div class="card" style="width: 30rem; margin-bottom: 0.5rem;">
+      <div class="card-body">
+        <p class="card-text">
+          <%= post.content %>
+        </p>
+        <h6 class="card-subtitle mb-2 text-muted">
+          投稿日時：<%= post.created_at %>
+        </h6>
+      </div>
     </div>
-    <div class="post-content">
-      <%= post.content %>
-    </div>
-  </div>
-<% end %>
+  <% end %>
+</main>
